@@ -14,7 +14,7 @@ jobs:
     - name: Checkout zipper
       uses: actions/checkout@v2
       with:
-        repository: lemniskett/AnyKernel3
+        repository: rootshaxor/android_kernel_oppo_mt6765
         path: zipper
 
     - name: Android kernel build
@@ -24,8 +24,8 @@ jobs:
         NAME: Dark-Ages-Último
       with:
         arch: arm64
-        compiler: gcc/10
-        defconfig: vince_defconfig
+        compiler: aosp-clang/master/android-9.0.0_r1/clang-4691093/binutils
+        defconfig: oppo6765_19581_defconfig
         image: Image.gz-dtb
 
     - name: Release build
